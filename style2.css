@@ -1,150 +1,83 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 
-body{
-    margin: 0px;
-}
-.paginaPrincipal {
-    width:100%;
-    height: 1000px;
-    background-image: url("img/fondo.png");
-    background-color: transparent;
-    background-size: cover;
-    background-position: center center;
-    display: flex;
-}
-.Cabecera .logo{
-    width: 400px;
-    height: 200px;
-    margin: 60px;
-    margin-left: 100px;
-}
-
-.icono{
-    float:right;
-    width: 300px;
-    height: 150px;
-}
-.Cabecera{
-    transition: 500ms ease-out;
-    position: fixed;
-    width: 100%;
-    height: 18%;
-    display: flex;
-}
-.Cabecera:hover{
-    background: rgb(0, 0, 0, .9);
-    box-shadow: 0 0 15px 20px rgb(0, 0, 0, .9);
-}
-
-.menuPrincipal{
-    width:100%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.menuPrincipal ul {
-    list-style:none;
-    background: none;
-}
-.menuPrincipal ul a {
-    color:rgb(255, 255, 255);
-    text-decoration:none;
-    font-size:20px;
-    padding:10px;
-    font-family: "Montserrat";
-    text-transform: uppercase;
-    font-weight: bolder;
-    float: right;
-    margin: 15px;
-    transition: 0.3s;
-}
-
-
-.footer{
-    background: rgb(0, 0, 0);
-    width: 100%;
-    height: 100px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-.footer p{
-    color: rgb(255,255,255);
-    font-family: "Montserrat";
-    font-weight: bolder;
-    text-align: center;
-    margin: 0px;
-}
-
-@media screen and (min-width: 576px){
     body{
         margin: 0px;
+        padding: 0px;
     }
     .paginaPrincipal {
         width:100%;
+        max-width: 100%;
         height: 1000px;
         background-image: url("img/fondo.png");
         background-color: transparent;
         background-size: cover;
         background-position: center center;
-        display: flex;
     }
     .Cabecera .logo{
-        width: 4000px;
-        height: 200px;
-        margin: 60px;
-        margin-left: 100px;
+        width: 18%;
+        height: 100%;
+        margin-left: 5%;
     }
-    
-    .icono{
-        float:right;
-        width: 300px;
-        height: 150px;
-    }
+
     .Cabecera{
         transition: 500ms ease-out;
         position: fixed;
-        width: 100%;
-        height: 18%;
+        left: 0;
+        top: 0;
+        right: 0;
+        height: 15%;
         display: flex;
-    }
-    .Cabecera:hover{
-        background: rgb(0, 0, 0, .9);
-        box-shadow: 0 0 15px 20px rgb(0, 0, 0, .9);
-    }
-    
-    .menuPrincipal{
-        width:100%;
-        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5%;
         flex-wrap: wrap;
+        background: rgb(0, 0, 0, .7);
+        box-shadow: 0 0 10px 20px rgb(0, 0, 0, .7);
     }
-    
-    .menuPrincipal ul {
-        list-style:none;
-        background: none;
+    .menuPrincipal{
+        margin: auto;
+        width: 50%;
     }
-    .menuPrincipal ul a {
+    .menuPrincipal ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
+    .menuPrincipal ul li{
+        display: inline-block;
+    }
+    .menuPrincipal ul li a{
+        display: block;
+        padding: 10px 20px;
         color:rgb(255, 255, 255);
         text-decoration:none;
-        font-size:20px;
-        padding:10px;
+        font-size:18px;
         font-family: "Montserrat";
         text-transform: uppercase;
         font-weight: bolder;
         float: right;
-        margin: 15px;
         transition: 0.3s;
     }
-    
-    
+    .menuPrincipal ul li a:hover {
+        color:#e7ac3f;
+        filter: saturate(2);
+        cursor: url("img/cursor.png"), auto;
+    }
+
     .footer{
         background: rgb(0, 0, 0);
         width: 100%;
-        height: 100px;
+        height: 30%;
         align-items: center;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 3% 0;
+    }
+
+    .icono{
+        display: none;
     }
     .footer p{
         color: rgb(255,255,255);
@@ -153,5 +86,65 @@ body{
         text-align: center;
         margin: 0px;
     }
-    
+    .footer img{
+        width: 12%;
+        height: 80%;
+        opacity: 0.7;
+        margin-left: 2%;
+    }
+
+
+@media screen and (max-width: 767px){
+
+    .icono{
+        display: block;
+        margin-right: 8%;
+        width: 14%;
+        height: 60%;
+        background-color: rgb(255,255,255,0.8);
+        border-radius: 20px;
+        padding: 0;
+    }
+    .Cabecera .logo{
+        width: 40%;
+        height: 100%;
+        margin-top:2%;
+        margin-left: 5%;
+    }
+    .menuPrincipal{
+        width: 100%;
+        margin-top: 2%;
+        right: 0;
+    }
+    .menuPrincipal ul{
+        display: none;
+    }
+    .menuPrincipal ul.show{
+        display: block;
+        background: rgb(0, 0, 0, .7);
+    }
+    .menuPrincipal ul li{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .menuPrincipal ul li a{
+        display: block;
+        padding: 10px 20px;
+        color:rgb(255, 255, 255);
+        text-decoration:none;
+        font-size:18px;
+        font-family: "Montserrat";
+        text-transform: uppercase;
+        font-weight: bolder;
+        transition: 0.3s;
+    }
+    .menuPrincipal ul li a:hover {
+        color:#e7ac3f;
+        font-size: 18px;
+        filter: saturate(2);
+        cursor: url("img/cursor.png"), auto;
+    }
+    .footer p{
+        font-size: 6px;
+    }
 }
