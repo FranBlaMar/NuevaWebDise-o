@@ -4,7 +4,6 @@ window.addEventListener("load", ()=>{
         document.querySelector("#loaderContenedor").classList.toggle("hidden");
     },3000)
     document.querySelector("body").classList.toggle("hiddenFlow");
-    console.log(window.visualViewport);
 })
 
 let icono = document.querySelector(".icono");
